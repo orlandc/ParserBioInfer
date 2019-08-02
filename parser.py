@@ -14,7 +14,7 @@ def getWord(node):
     oracion = ""
     for parent in node.childNodes:
         if parent.nodeType != parent.TEXT_NODE:
-            print(parent)
+            print(parent.getAttribute("origText"))
             if parent.getAttribute("origText") != "":
                 oracion += parent.getAttribute("origText") + " "
             else:
